@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            font-size: 120px;
+            text-align: center;
+            align-items: center;
+            animation: rotate  10s linear infinite;
+        }
+        @keyframes rotate{
+            100%{
+                transform: rotatey(360deg);
+            }
+
+        }
+        .loader{
+            height: 100px;
+            width: 100px;
+            border: 38px solid #2390ED;
+            border-top: 38px solid #21c6f6;
+            border-radius: 50%;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin{
+            100% {transform:rotate(360deg)}
+        }
+        /* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Header Styles */
+header h1 {
+    margin: 0;
+}
+
+/* Portfolio Styles */
+.portfolio-item {
+    margin-bottom: 20px;
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Contact Form Styles */
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#contact-form button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+    </style>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        var formData = new FormData(contactForm);
+        // Replace the following code with your actual form submission logic
+        console.log('Form submitted:', formData);
+        // Reset the form after submission
+        contactForm.reset();
+    });
+});
+
+
+
+
+
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Add your bio or description here.</p>
+        </div>
+    </section>
+    
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <div class="portfolio-items">
+                <!-- Add your portfolio items here -->
+                <div class="portfolio-item">
+                    <img src="portfolio-item-1.jpg" alt="Portfolio Item 1">
+                    <h3>Portfolio Item 1</h3>
+                    <p>Description of portfolio item 1.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="portfolio-item-2.jpg" alt="Portfolio Item 2">
+                    <h3>Portfolio Item 2</h3>
+                    <p>Description of portfolio item 2.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+    <div class="loader"></div>
+    <h1>Hello</h1>
+</body>
+</html>
